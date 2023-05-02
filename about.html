@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>about me website </title>
+
+</head>
+
+<Body>
+
+     <h1> Name:FM</h1>
+
+     <p>hello</p>
+     <script>
+
+		function calculate() {			var operand1 = parseFloat(document.getElementById("operand1").value);
+
+			var operand2 = parseFloat(document.getElementById("operand2").value);
+
+			var operator = document.getElementById("operator").value;
+
+			if (isNaN(operand1) || isNaN(operand2)) {
+
+				document.getElementById("result").innerHTML = "Invalid input";
+
+				return;
+
+			}
+
+			switch (operator) {
+
+				case "+":
+
+					document.getElementById("result").innerHTML = operand1 + operand2;
+
+					break;
+
+				case "-":
+
+					document.getElementById("result").innerHTML = operand1 - operand2;
+
+					break;
+
+				case "*":
+
+					document.getElementById("result").innerHTML = operand1 * operand2;
+
+					break;
+
+				case "/":
+
+					if (operand2 == 0) {
+
+						document.getElementById("result").innerHTML = "Division by zero";
+
+						return;
+
+					}
+
+					document.getElementById("result").innerHTML = operand1 / operand2;
+
+					break;
+
+				default:
+
+					document.getElementById("result").innerHTML = "Invalid operator";
+
+			}
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<h1>Calculator</h1>
+
+	<label for="operand1">Operand 1:</label>
+
+	<input type="text" id="operand1"><br>
+
+	<label for="operator">Operator:</label>
+
+	<select id="operator">
+
+		<option value="+">+</option>
+
+		<option value="-">-</option>
+
+		<option value="*">*</option>
+
+		<option value="/">/</option>
+
+	</select><br>
+
+	<label for="operand2">Operand 2:</label>
+
+	<input type="text" id="operand2"><br>
+
+	<button onclick="calculate()">Calculate</button><br>
+
+	<label for="result">Result:</label>
+
+	<span id="result"></span>
+
+  </body>
+  <a href="./index.html">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
