@@ -3,11 +3,16 @@
 <head>
 	<title>HTML Snake Game</title>
 	<style>
+	    body {
+			background-color: darkgrey;
+		}
+	    
 		#gameCanvas {
-			width: 400px;
-			height: 400px;
+			width: 500px;
+			height: 700px;
 			border: 1px solid black;
 			position: relative;
+			background-color:black;
 		}
 		.snake {
 			width: 10px;
@@ -21,11 +26,11 @@
 			background-color: red;
 			position: absolute;
 		}
-		@media (max-width: 600px) {
+		@media (max-width: 700px) {
 			#gameCanvas {
-				width: 100%;
-				height: auto;
-				border: none;
+				width:100%;
+				height:auto;
+				border:none;
 			}
 			.snake, .food {
 				width: 5px;
@@ -41,10 +46,22 @@
 	</style>
 </head>
 <body>
-	<div style="height: 80%">
+	<div style="height: 90%">
 		<canvas id="gameCanvas"></canvas>
 	</div>
-	<div style="height: 20%">
+	<div style="height: 10%">
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <div style="text-align: center;">
+  <p>TOUCH HERE TO PLAY</p>
+</div>
+
+	    
     <button id="homeButton" onclick="location.href='./index.html'">Home</button>
 </div>
 
@@ -170,3 +187,6 @@ function handleTouchMove(event) {
 	</script>
 </body>
 </html>
+
+
+			
