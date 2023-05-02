@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>1st test website </title>
+
+</head>
+
+<Body>
+
+     <h1> CALCULATOR</h1>
+
+     
+     <style>
+      body {
+        background-color: black;
+        color: lightgray;
+      }
+      #calculator {
+        background-color: black;
+        border: solid 2px gray;
+        border-radius: 15px;
+        margin: 100px auto;
+        width: 300px;
+        padding: 5px;
+        text-align: right;
+        box-shadow: 0px 0px 0px gray;
+      }
+      #output { 
+      font-size: 36px;
+      text-align: right; 
+      border: 1px solid darkgrey;
+      border-radius: 5px; 
+      padding: 5px;
+      margin: 5px 0; 
+      background-color: black; color: white;
+      }
+      
+      button {
+        background-color: #222;
+        color: lightgray;
+        border: none;
+        border-radius: 25px;
+        padding: 11.5px;
+        margin: 5px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0px 1px 5px gray;
+      }
+      button.clear {
+        background-color: gray;
+        color: white;
+        border-radius: 25px;
+      }
+      button.equal {
+        background-color: orange;
+        color: yellow;
+        border-radius: 25px;
+      }
+      button.number {
+        background-color: #333;
+        border-radius: 25px;
+      }
+      button.operator {
+        background-color: gray;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="output"></div>
+      <button class="clear" onclick="clearOutput()">C</button>
+      <button class="number" onclick="appendToOutput('%')">%</button>
+      <button onclick="backspace()">⌫</button>
+      <button class="operator" onclick="appendToOutput('/')">÷</button>
+      <br>
+      <button class="number" onclick="appendToOutput('7')">7</button>
+      <button class="number" onclick="appendToOutput('8')">8</button>
+      <button class="number" onclick="appendToOutput('9')">9</button>
+      <button class="operator" onclick="appendToOutput('*')">×</button>
+      <br>
+      <button class="number" onclick="appendToOutput('4')">4</button>
+      <button class="number" onclick="appendToOutput('5')">5</button>
+      <button class="number" onclick="appendToOutput('6')">6</button>
+      <button class="operator" onclick="appendToOutput('+')">+</button>
+      <br>
+      <button class="number" onclick="appendToOutput('1')">1</button>
+      <button class="number" onclick="appendToOutput('2')">2</button>
+      <button class="number" onclick="appendToOutput('3')">3</button>
+      <button class="operator" onclick="appendToOutput('-')">-</button>
+      <br>
+      <button class="number" onclick="appendToOutput('0')">0</button>
+      <button class="number" onclick="appendToOutput('00')">00</button>
+      <button onclick="appendToOutput('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+    <script>
+      
+            
+      function appendToOutput(value) {
+        document.getElementById('output').innerHTML += value;
+      }
+      function clearOutput() {
+        document.getElementById('output').innerHTML = '';
+      }
+      function backspace() {
+        let output = document.getElementById('output').innerHTML;
+        document.getElementById('output').innerHTML = output.slice(0, -1);
+      }
+      function calculate() {
+        let expression = document.getElementById('output').innerHTML;
+        let result = eval(expression);
+        document.getElementById('output').innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
+
+     <br>
+     <br>
+     <br>
+     <br>
+     
+
+     <button1 onclick="location.href='./index.html'" style="float: right;">home   </button>
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
